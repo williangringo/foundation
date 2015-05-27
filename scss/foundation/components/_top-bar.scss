@@ -13,7 +13,7 @@
 $include-html-top-bar-classes: $include-html-classes !default;
 
 // Background color for the top bar
-$topbar-bg-color: $oil !default;
+$topbar-bg-color: $nepente-marrom !default;
 $topbar-bg: $topbar-bg-color !default;
 
 // Height and margin
@@ -33,10 +33,10 @@ $topbar-link-weight: $font-weight-normal !default;
 $topbar-link-font-size: rem-calc(13) !default;
 $topbar-link-hover-lightness: -10% !default; // Darken by 10%
 $topbar-link-bg: $topbar-bg !default;
-$topbar-link-bg-hover: $jet !default;
-$topbar-link-bg-color-hover: $charcoal !default;
-$topbar-link-bg-active: $primary-color !default;
-$topbar-link-bg-active-hover: scale-color($primary-color, $lightness: -14%) !default;
+$topbar-link-bg-hover: scale-color($topbar-bg, $lightness: -14%) !default;
+$topbar-link-bg-color-hover: $topbar-bg !default;
+$topbar-link-bg-active: $topbar-bg !default;
+$topbar-link-bg-active-hover: scale-color($topbar-bg, $lightness: -14%) !default;
 $topbar-link-font-family: $body-font-family !default;
 $topbar-link-text-transform: none !default;
 $topbar-link-padding: ($topbar-height / 3) !default;
@@ -46,11 +46,11 @@ $topbar-button-font-size: .75rem !default;
 $topbar-button-top: 7px !default;
 
 // Style the top bar dropdown elements
-$topbar-dropdown-bg: $oil !default;
+$topbar-dropdown-bg: $topbar-bg !default;
 $topbar-dropdown-link-color: $white !default;
 $topbar-dropdown-link-color-hover: $topbar-link-color-hover !default;
-$topbar-dropdown-link-bg: $oil !default;
-$topbar-dropdown-link-bg-hover: $jet !default;
+$topbar-dropdown-link-bg: $topbar-bg !default;
+$topbar-dropdown-link-bg-hover: scale-color($topbar-bg, $lightness: -14%) !default;
 $topbar-dropdown-link-weight: $font-weight-normal !default;
 $topbar-dropdown-toggle-size: 5px !default;
 $topbar-dropdown-toggle-color: $white !default;
@@ -172,12 +172,12 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
       }
 
       form,
-      input, 
+      input,
       select {
         margin-bottom: 0;
       }
 
-      input, 
+      input,
       select {
         font-size: $topbar-button-font-size;
         height: $topbar-input-height;
@@ -515,9 +515,9 @@ $topbar-dropdown-arrows: true !default; //Set false to remove the \00bb >> text 
         }
 
         .has-form > .button,
-        .has-form > button { 
+        .has-form > button {
           padding-top: rem-calc(5);
-          top: (($topbar-height - $topbar-input-height + rem-calc(-3)) / 2); 
+          top: (($topbar-height - $topbar-input-height + rem-calc(-3)) / 2);
         }
 
         &.expanded {
